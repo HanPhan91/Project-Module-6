@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="template-maven-webapp" />
+        <module name="Project-Module-6" />
       </profile>
     </annotationProcessing>
   </component>
