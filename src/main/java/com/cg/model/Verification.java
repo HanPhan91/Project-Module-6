@@ -24,6 +24,45 @@ public class Verification {
     @Column(name = "created_at", updatable = false)
     private Date createdAt;
 
+    public Verification() {
+    }
 
+    public Verification(Long id, String identityCard, String driverLicense, Date createdAt) {
+        this.id = id;
+        this.identityCard = identityCard;
+        this.driverLicense = driverLicense;
+        this.createdAt = createdAt;
+    }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getIdentityCard() {
+        return identityCard;
+    }
+
+    public void setIdentityCard(String identityCard) {
+        this.identityCard = identityCard;
+    }
+
+    public String getDriverLicense() {
+        return driverLicense;
+    }
+
+    public void setDriverLicense(String driverLicense) {
+        this.driverLicense = driverLicense;
+    }
+
+    public Date getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
+    }
 }

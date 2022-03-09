@@ -30,4 +30,82 @@ public class LocationRegion {
 
     @Column(name = "ward_name")
     private String wardName;
+
+    public LocationRegion() {
+    }
+
+    public LocationRegion(Long id, String address, Long districtId, String districtName, Long provinceId, String provinceName, Long wardId, String wardName) {
+        this.id = id;
+        this.address = address;
+        this.districtId = districtId;
+        this.districtName = districtName;
+        this.provinceId = provinceId;
+        this.provinceName = provinceName;
+        this.wardId = wardId;
+        this.wardName = wardName;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public Long getDistrictId() {
+        return districtId;
+    }
+
+    public void setDistrictId(Long districtId) {
+        this.districtId = districtId;
+    }
+
+    public String getDistrictName() {
+        return districtName;
+    }
+
+    public void setDistrictName(String districtName) {
+        this.districtName = districtName;
+    }
+
+    public Long getProvinceId() {
+        return provinceId;
+    }
+
+    public void setProvinceId(Long provinceId) {
+        this.provinceId = provinceId;
+    }
+
+    public String getProvinceName() {
+        return provinceName;
+    }
+
+    public void setProvinceName(String provinceName) {
+        this.provinceName = provinceName;
+    }
+
+    public Long getWardId() {
+        return wardId;
+    }
+
+    public void setWardId(Long wardId) {
+        this.wardId = wardId;
+    }
+
+    public String getWardName() {
+        return wardName;
+    }
+
+    public void setWardName(String wardName) {
+        this.wardName = wardName;
+    }
 }

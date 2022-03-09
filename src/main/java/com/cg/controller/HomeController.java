@@ -9,7 +9,12 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("/")
 public class HomeController {
     @GetMapping
-    public ModelAndView showIndex(){
-        return new ModelAndView("index");
+    public ModelAndView showIndex() {
+        return new ModelAndView("landing/index");
+    }
+
+    @GetMapping("/home")
+    public ModelAndView showHome() {
+        return new ModelAndView("driver/home");
     }
 }

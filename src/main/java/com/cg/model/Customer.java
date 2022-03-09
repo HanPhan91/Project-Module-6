@@ -25,14 +25,79 @@ public class Customer {
     @Size(min = 5, max = 35, message = "Kích thước tên nằm trong khoảng 5-35 ký tự")
     @Column(name = "full_name")
     private String fullName;
-    private String birthDay;
+
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "Asia/Ho_Chi_Minh")
+    @Column(name = "birth_day")
+    private Date birthDay;
+
+    @NotBlank(message = "Số điện thoại không được để trống")
+    @Pattern(regexp = "(^$|[0-9]{10})", message = "Số điện thoại không đúng")
     private String phone;
+
     private String address;
 
+
+    @OneToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
     public Customer() {
     }
 
+    public Customer(Long id, String fullName, Date birthDay, String phone, String address, User user) {
+        this.id = id;
+        this.fullName = fullName;
+        this.birthDay = birthDay;
+        this.phone = phone;
+        this.address = address;
+        this.user = user;
+    }
 
+    public Long getId() {
+        return id;
+    }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public Date getBirthDay() {
+        return birthDay;
+    }
+
+    public void setBirthDay(Date birthDay) {
+        this.birthDay = birthDay;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 }
