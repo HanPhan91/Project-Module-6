@@ -12,7 +12,7 @@ public class AppInit extends AbstractAnnotationConfigDispatcherServletInitialize
     protected Class<?>[] getRootConfigClasses() {
         return new Class[]{AppConfig.class};
     }
-
+//chanom
     @Override
     protected Class<?>[] getServletConfigClasses() {
         return new Class[0];
